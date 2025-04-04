@@ -1,4 +1,5 @@
 <?php
+require __DIR__ . "../public/index.php";
 header('Content-Type: text/html; charset=UTF-8');
 define('BASE_PATH', __DIR__);
 
