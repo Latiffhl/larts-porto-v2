@@ -1,3 +1,6 @@
+<?php
+define('BASE_PATH', __DIR__);
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,27 +10,27 @@
     <main>
       <article>
         <section id="hero">
-          <?php include '/var/task/user/api/pages/hero/hero.php'; ?>
+          <?php include BASE_PATH . '/pages/hero/hero.php'; ?>
         </section>
 
         <section id="about">
-          <?php include '/var/task/user/api/pages/about/about.php'; ?>
+          <?php include BASE_PATH . '/pages/about/about.php'; ?>
         </section>
 
         <section id="portfolio">
-          <?php include '/var/task/user/api/pages/portofolio/portofolio.php'; ?>
+          <?php include BASE_PATH . '/pages/portofolio/portofolio.php'; ?>
         </section>
 
         <section id="skills">
-          <?php include '/var/task/user/api/pages/skills/skills.php'; ?>
+          <?php include BASE_PATH . '/pages/skills/skills.php'; ?>
         </section>
 
         <section id="blog">
-          <?php include '/var/task/user/api/pages/blogs/blogs.php'; ?>
+          <?php include BASE_PATH . '/pages/blogs/blogs.php'; ?>
         </section>
 
         <section id="contact">
-          <?php include '/var/task/user/api/pages/contact/contact.php'; ?>
+          <?php include BASE_PATH . '/pages/contact/contact.php'; ?>
         </section>
       </article>
     </main>
