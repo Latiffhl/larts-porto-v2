@@ -12,33 +12,41 @@ function includeWithFallback($path) {
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lartz</title>
+
+    <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
     <!-- ...existing code... -->
   </head>
-  <body>
+  <body id="top">
+    <!-- ...existing code... -->
     <main>
       <article>
         <section id="hero">
-          <?php includeWithFallback(BASE_PATH . '/api/pages/hero/hero.php'); ?>
+          <?php include __DIR__ . '/hero.php'; ?>
         </section>
 
         <section id="about">
-          <?php includeWithFallback(BASE_PATH . '/api/pages/about/about.php'); ?>
+          <?php include __DIR__ . '/about.php'; ?>
         </section>
 
         <section id="portfolio">
-          <?php includeWithFallback(BASE_PATH . '/api/pages/portofolio/portofolio.php'); ?>
+          <?php include __DIR__ . '/portfolio.php'; ?>
         </section>
 
         <section id="skills">
-          <?php includeWithFallback(BASE_PATH . '/api/pages/skills/skills.php'); ?>
+          <?php include __DIR__ . '/skills.php'; ?>
         </section>
 
         <section id="blog">
-          <?php includeWithFallback(BASE_PATH . '/api/pages/blogs/blogs.php'); ?>
+          <?php include __DIR__ . '/blog.php'; ?>
         </section>
 
         <section id="contact">
-          <?php includeWithFallback(BASE_PATH . '/api/pages/contact/contact.php'); ?>
+          <?php include __DIR__ . '/contact.php'; ?>
         </section>
       </article>
     </main>
