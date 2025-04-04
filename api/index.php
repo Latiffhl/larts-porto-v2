@@ -1,3 +1,18 @@
+<?php
+function handler($request) {
+    ob_start();
+    include __DIR__ . '/../index.php';
+    $output = ob_get_clean();
+    
+    return [
+        'status' => 200,
+        'headers' => [
+            'content-type' => 'text/html;charset=UTF-8',
+        ],
+        'body' => $output
+    ];
+}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
