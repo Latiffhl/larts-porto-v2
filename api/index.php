@@ -2,10 +2,10 @@
 header('Content-Type: text/html; charset=UTF-8');
 define('BASE_PATH', __DIR__);
 
-function safeInclude($file) {
+function safeRequire($file) {
     $path = BASE_PATH . '/pages/' . $file;
     if (file_exists($path)) {
-        include $path;
+        require $path;
     } else {
         echo "<!-- Could not load component: $file -->";
     }
@@ -33,27 +33,27 @@ ob_start();
     <main>
       <article>
         <section id="hero">
-          <?php safeInclude('hero/hero.php'); ?>
+          <?php safeRequire('hero/hero.php'); ?>
         </section>
 
         <section id="about">
-          <?php safeInclude('about/about.php'); ?>
+          <?php safeRequire('about/about.php'); ?>
         </section>
 
         <section id="portfolio">
-          <?php safeInclude('portofolio/portofolio.php'); ?>
+          <?php safeRequire('portofolio/portofolio.php'); ?>
         </section>
 
         <section id="skills">
-          <?php safeInclude('skills/skills.php'); ?>
+          <?php safeRequire('skills/skills.php'); ?>
         </section>
 
         <section id="blog">
-          <?php safeInclude('blogs/blogs.php'); ?>
+          <?php safeRequire('blogs/blogs.php'); ?>
         </section>
 
         <section id="contact">
-          <?php safeInclude('contact/contact.php'); ?>
+          <?php safeRequire('contact/contact.php'); ?>
         </section>
       </article>
     </main>
