@@ -2,6 +2,15 @@
 header('Content-Type: text/html; charset=UTF-8');
 define('BASE_PATH', __DIR__);
 
+function safeInclude($file) {
+    $path = BASE_PATH . '/pages/' . $file;
+    if (file_exists($path)) {
+        include $path;
+    } else {
+        echo "<!-- Could not load component: $file -->";
+    }
+}
+
 ob_start();
 ?>
 <!DOCTYPE html>
@@ -24,7 +33,27 @@ ob_start();
     <main>
       <article>
         <section id="hero">
-          <?php include BASE_PATH . '/pages/hero.php'; ?>
+          <?php safeInclude('hero/hero.php'); ?>
+        </section>
+
+        <section id="about">
+          <?php safeInclude('about/about.php'); ?>
+        </section>
+
+        <section id="portfolio">
+          <?php safeInclude('portofolio/portofolio.php'); ?>
+        </section>
+
+        <section id="skills">
+          <?php safeInclude('skills/skills.php'); ?>
+        </section>
+
+        <section id="blog">
+          <?php safeInclude('blogs/blogs.php'); ?>
+        </section>
+
+        <section id="contact">
+          <?php safeInclude('contact/contact.php'); ?>
         </section>
       </article>
     </main>
