@@ -1,6 +1,8 @@
 <?php
 header('Content-Type: text/html; charset=UTF-8');
 define('BASE_PATH', __DIR__);
+
+ob_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,6 +14,13 @@ define('BASE_PATH', __DIR__);
 
     <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body id="top">
+    <a href="https://api.whatsapp.com/send?phone=6281234567890" class="whatsapp-button" target="_blank">
+      <img src="/assets/images/whatsapp-icon.png" alt="WhatsApp" />
+    </a>
+
+    <script src="/script.js"></script>
     <main>
       <article>
         <section id="hero">
@@ -21,3 +30,7 @@ define('BASE_PATH', __DIR__);
     </main>
   </body>
 </html>
+<?php
+$output = ob_get_clean();
+echo $output;
+?>
