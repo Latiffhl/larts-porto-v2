@@ -62,27 +62,27 @@
     <main>
       <article>
         <section id="hero">
-          <?php include './page/hero/hero.php'; ?>
+          <?php include __DIR__ . '/page/hero/hero.php'; ?>
         </section>
 
         <section id="about">
-          <?php include './page/about/about.php'; ?>
+          <?php include __DIR__ . '/page/about/about.php'; ?>
         </section>
 
         <section id="portfolio">
-          <?php include './page/portofolio/portofolio.php'; ?>
+          <?php include __DIR__ . '/page/portofolio/portofolio.php'; ?>
         </section>
 
         <section id="skills">
-          <?php include './page/skills/skills.php'; ?>
+          <?php include __DIR__ . '/page/skills/skills.php'; ?>
         </section>
 
         <section id="blog">
-          <?php include './page/blogs/blogs.php'; ?>
+          <?php include __DIR__ . '/page/blogs/blogs.php'; ?>
         </section>
 
         <section id="contact">
-          <?php include './page/contact/contact.php'; ?>
+          <?php include __DIR__ . '/page/contact/contact.php'; ?>
         </section>
       </article>
     </main>
