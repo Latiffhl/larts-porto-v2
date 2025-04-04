@@ -1,4 +1,5 @@
 <?php
+require __DIR__ . "../public/index.php";
 define('BASE_PATH', '/var/task/user');
 
 function includeWithFallback($path) {
