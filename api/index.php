@@ -1,5 +1,13 @@
 <?php
-define('BASE_PATH', __DIR__);
+define('BASE_PATH', '/var/task/user');
+
+function includeWithFallback($path) {
+    if (file_exists($path)) {
+        include $path;
+    } else {
+        echo "<!-- Component not found: $path -->";
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,27 +18,27 @@ define('BASE_PATH', __DIR__);
     <main>
       <article>
         <section id="hero">
-          <?php include BASE_PATH . '/pages/hero/hero.php'; ?>
+          <?php includeWithFallback(BASE_PATH . '/api/pages/hero/hero.php'); ?>
         </section>
 
         <section id="about">
-          <?php include BASE_PATH . '/pages/about/about.php'; ?>
+          <?php includeWithFallback(BASE_PATH . '/api/pages/about/about.php'); ?>
         </section>
 
         <section id="portfolio">
-          <?php include BASE_PATH . '/pages/portofolio/portofolio.php'; ?>
+          <?php includeWithFallback(BASE_PATH . '/api/pages/portofolio/portofolio.php'); ?>
         </section>
 
         <section id="skills">
-          <?php include BASE_PATH . '/pages/skills/skills.php'; ?>
+          <?php includeWithFallback(BASE_PATH . '/api/pages/skills/skills.php'); ?>
         </section>
 
         <section id="blog">
-          <?php include BASE_PATH . '/pages/blogs/blogs.php'; ?>
+          <?php includeWithFallback(BASE_PATH . '/api/pages/blogs/blogs.php'); ?>
         </section>
 
         <section id="contact">
-          <?php include BASE_PATH . '/pages/contact/contact.php'; ?>
+          <?php includeWithFallback(BASE_PATH . '/api/pages/contact/contact.php'); ?>
         </section>
       </article>
     </main>
